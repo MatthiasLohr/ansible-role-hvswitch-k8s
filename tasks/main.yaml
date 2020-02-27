@@ -1,0 +1,17 @@
+
+- name: Create Routing Tables for vSwitch interfaces
+  lineinfile:
+    path: /etc/iproute2/rt_tables
+    regexp: '^{{ item.routing_table | default(1) }}\s'
+    line: '{{ item.routing_table | default(1) }} {{ item.name }}'
+  with_items: "{{ vswitches }}"
+
+- name: Write netplan configuration for vSwitch interfaces
+  template:
+    src: netplan.yaml
+    dest: /etc/netplan/99-k8s-public.yaml
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - netplan apply

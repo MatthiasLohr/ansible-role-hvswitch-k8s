@@ -1,0 +1,3 @@
+
+- name: netplan apply
+  shell: netplan apply
