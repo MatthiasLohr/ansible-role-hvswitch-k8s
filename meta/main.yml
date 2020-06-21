@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: hvswitch-k8s
+  role_name: hvswitch_k8s
   author: Matthias Lohr <mail@mlohr.com>
   description: Ansible role for setting up Hetzner vSwitches and server networking for Kubernetes
   company: https://mlohr.com/
