@@ -1,0 +1,25 @@
+galaxy_info:
+  role_name: hvswitch-k8s
+  author: Matthias Lohr <mail@mlohr.com>
+  description: Ansible role for setting up Hetzner vSwitches and server networking for Kubernetes
+  company: https://mlohr.com/
+  license: MIT
+
+  min_ansible_version: 2.2
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - hetzner
+    - kubernetes
+    - vswitch
+    - metallb
+    - netplan
+
+dependencies: []
