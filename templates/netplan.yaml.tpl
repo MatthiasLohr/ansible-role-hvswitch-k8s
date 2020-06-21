@@ -1,5 +1,3 @@
-# yamllint disable-file
-# This file is not valid YAML because it is a Jinja template
 network:
   version: 2
   vlans:

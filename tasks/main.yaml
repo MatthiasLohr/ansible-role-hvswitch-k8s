@@ -7,7 +7,7 @@
 
 - name: Write netplan configuration for vSwitch interfaces
   template:
-    src: netplan.yaml
+    src: netplan.yaml.tpl
     dest: /etc/netplan/99-k8s-public.yaml
     owner: root
     group: root
